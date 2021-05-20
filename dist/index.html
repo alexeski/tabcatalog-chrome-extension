@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Tableau Metadata API Explorer</title>
+	<link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body class="container">
+	<img alt="" src="images/tableau_sparkle_logo.png" width="35" height="35" />
+	<div>
+		<h1>Tableau Metadata API Explorer</h1>
+	</div>
+
+	<!--form area-->
+	<form class="form-data" autocomplete="on">
+		<table border="0">
+			<tr>
+				<td class="td-align-right"><span>Server</span></td>
+				<td><input type="text" id="server_url" required class="" placeholder="Url">
+				</td>
+				<td><input type="text" id="site" required class="" placeholder="my-awesome-site"></td>
+			</tr>
+			<tr>
+				<td class="td-align-right"><span>PAT</span></td>
+				<td><input type="text" id="pat_name" required class="" placeholder="pat-name"></td>
+				<td><input type="text" id="pat_value" required class="" placeholder="pat-value"> </td>
+			</tr>
+
+		</table>
+
+		<div>
+			<label for="graphql_query_input">GraphQL query</label>
+			<textarea name="text" id="graphql_query_input" cols="45" rows="15" placeholder="
+			query getDataSources {
+				datasources {
+					id
+					name
+				}
+			}"></textarea>
+		</div>
+
+		<button class="search-btn">Submit</button>
+	</form>
+
+	<!--result area-->
+	<div class="result">
+		<div class="loading">loading...</div>
+		<div class="errors"></div>
+		<!-- <div class="data"></div> -->
+		<button class="clear-btn results-buttons">Change Query</button>
+		<button class="exportJson-btn results-buttons">Download Response</button>
+		<div class="result-container">
+			<p><strong>Query:</strong></p>
+			<p>
+				<pre class="graphql_query_used"></pre>
+			</p>
+			<!-- <p><strong>Region: </strong><span class="my-region"></span></p> -->
+			<!-- <p><strong>Carbon Usage: </strong><span class="carbon-usage"></span></p> -->
+			<!-- <p><strong>Fossil Fuel Percentage: </strong><span class="fossil-fuel"></span></p> -->
+			<p><strong>Metadata API response:</strong></p>
+			<!-- <p><span class="metadata_api_response"></span></p> -->
+			<pre class="metadata_api_response"></pre>
+		</div>
+
+	</div>
+
+	<script src="main.js"></script>
+</body>
+
+</html>
