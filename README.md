@@ -1,6 +1,6 @@
-# Carbon Trigger Browser Extension: Starter Code
+# TabCatalog - Tableau Metadata API Explorer Extension
 
-Using tmrow's C02 Signal API to track electricity usage, build a browser extension so that you can have a reminder right in your browser about how heavy your region's electricity usage is. Using this extension ad hoc will help you to make judgement calls on your activities based on this information.
+Using ([Tableau's Metadata API](https://help.tableau.com/current/api/metadata_api/en-us/index.html)) , one can explore metadata from the ([Tableau Catalog])(https://www.tableau.com/products/add-ons/catalog) using GraphQL queries. This extension allows one to quickly explore data from the Catalog and even export the results to a Json file, to further data analysis with e.g ([Tableau Desktop](https://www.tableau.com/products/desktop)) and ([Tableau Prep](https://www.tableau.com/products/prep)).
 
 ![extension screenshot](../extension-screenshot.png)
 
@@ -20,9 +20,10 @@ Build the extension from webpack
 npm run build
 ```
 
-To install on Edge, use the 'three dot' menu on the top right corner of the browser to find the Extensions panel. From there, select 'Load Unpacked' to load a new extension. Open the 'dist' folder at the prompt and the extension will load. To use it, you will need an API key for CO2 Signal's API ([get one here via email](https://www.co2signal.com/) - enter your email in the box on this page) and the [code for your region](http://api.electricitymap.org/v3/zones) corresponding to the [Electricity Map](https://www.electricitymap.org/map) (in Boston, for example, I use 'US-NEISO').
+To install on Chrome/Edge/Brave (or any Chromium-based browser), use the 'three dot' menu on the top right corner of the browser to find the Extensions panel. From there, select 'Load Unpacked' to load a new extension. Open the 'dist' folder at the prompt and the extension will load.
+
+To use it, you will need a Tableau Server Personal Access Token name and key ([read more on how to generate one](https://help.tableau.com/current/server/en-us/security_personal_access_tokens.htm#creating-tokens)) and the URL for your Tableau Server or Tableau Online, for example https://my-server.com or https://eu-west-1a.online.tableau.com . You will also need the Tableau Site name.
 
 ![installing](../install-on-edge.png)
 
-Once the API key and region is input into the extension interface, the colored dot in the browser extension bar should change to reflect your region's energy usage and give you a pointer on what energy-heavy activities would be appropriate for you to perform. The concept behind this 'dot' system was given to me by the [Energy Lollipop extension](https://energylollipop.com/) for California emissions.
 

@@ -7,16 +7,23 @@
 	margin-top: 1em;
 }
 
-.clear-btn,
+.results-buttons {
+	display: inline-flex;
+	margin: 5px;
+	gap: 1em;
+	/* space between buttons */
+}
+
+.clear-btn {
+	text-align: center;
+	margin: 0 auto;
+	padding-left: -20px;
+}
+
 .exportJson-btn {
 	text-align: center;
 	margin: 0 auto;
-}
-
-.results-buttons {
-	display: inline-block;
-	margin: 5px;
-	/* space between buttons */
+	padding-right: -20px;
 }
 
 /* Formatting Metadata API JSON responses */
@@ -99,11 +106,6 @@ body {
 	-webkit-font-smoothing: antialiased;
 	background-color: var(--c3);
 	/* background-color: var(--c2); */
-	/* background: linear-gradient(to right, #99ccff 0%, #ffcc99 100%); */
-	/* background: -webkit-linear-gradient(360deg,#e9fbcf 10%,#1d7d8e 360%); background: linear-gradient(360deg,#e9fbcf 10%,#1d7d8e 360%); */
-	/* background: -webkit-linear-gradient(360deg, #949494 10%, #efefef 360%); */
-	/* background: linear-gradient(360deg, #949494 10%, #efefef 360%); */
-	/* background: linear-gradient(360deg, #d6d6d6 10%, #efefef 360%); */
 
 	color: var(--c4);
 	/* min-width: 500px;
