@@ -10,8 +10,8 @@
 .results-buttons {
 	display: inline-flex;
 	margin: 5px;
-	gap: 1em;
 	/* space between buttons */
+	gap: 1em;
 }
 
 .clear-btn {
