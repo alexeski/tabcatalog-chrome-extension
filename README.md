@@ -30,6 +30,7 @@ To use it, you will need a Tableau Server Personal Access Token name and key ([r
 
 You'll also need to know how to write some GraphQL queries compatible to the Tableau Catalog. You can find some examples ([here](https://help.tableau.com/current/api/metadata_api/en-us/docs/meta_api_examples.html#common-queries-to-get-your-started). To get started real quick, try this one:
 
+```json
 query getViews_and_Workbooks {
     views {
       workbook {
@@ -43,3 +44,4 @@ query getViews_and_Workbooks {
       updatedAt
     }
   }
+  ```
