@@ -1,4 +1,4 @@
-# TabCatalog - Tableau Metadata API Explorer Chrome Extension
+# TabCatalog - A simple Chrome Extension to explore the Tableau Metadata API and download query results
 
 Using [Tableau's Metadata API](https://help.tableau.com/current/api/metadata_api/en-us/index.html) , one can explore metadata from the ([Tableau Catalog])(https://www.tableau.com/products/add-ons/catalog)) using GraphQL queries. 
 
